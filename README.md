@@ -3,8 +3,6 @@
 
 A modern [Jekyll](https://jekyllrb.com/) theme focused on speed performance & SEO best practices.
 
-![Sleek Jekyll Theme](./sleek.jpg)
-
 ## Features
 
 * Compatible with [Github Pages](https://pages.github.com/)
@@ -12,7 +10,7 @@ A modern [Jekyll](https://jekyllrb.com/) theme focused on speed performance & SE
 * SEO friendly, with help of [Jekyll SEO Plugin](https://github.com/jekyll/jekyll-seo-tag)
 * Easy [Google Tag Manager](https://tagmanager.google.com/) Integration
 * Support for [Disqus](https://disqus.com/) comments
-* Form submissions with [Formspree](#formspree)
+* Form submissions with [Formspree](https://formspree.io/)
 
 [Preview Demo](https://janczizikow.github.io/sleek/)
 
@@ -68,20 +66,21 @@ Or install it yourself as:
 
     $ gem install jekyll-sleek
 
-##[File Structure Overview](#file-structure-overview)
+
+## File Structure Overview
 
 ```bash
 sleek
-├── _includes	               # theme includes
+├── _includes	                 # theme includes
 ├── _js	                       # javascript files (by default jquery will be included with the scripts inside)
 ├── _layouts                   # theme layouts (see below for details)
 ├── _pages                     # pages folder (empty by default)
 ├── _posts                     # blog posts
 ├── _sass                      # Sass partials
 ├── assets
-|  ├── css	               # minified css files  
+|  ├── css	                   # minified css files  
 |  ├── img                     # images and icons used for the template
-|  └── js		               # bundled and minified files from _js folder
+|  └── js		                   # bundled and minified files from _js folder
 ├── _config.yml                # sample configuration
 ├── gulpfile.js                # gulp tasks (tasks autorunner)
 ├── index.md                   # sample home page (blog page)
@@ -96,17 +95,11 @@ TODO
 
 TODO
 
-###[Google Tag Manager](#gtm)
+### Google Tag Manager
 
-To enable Google Tag Manager, add the following lines to `_config.yml`: 
-```yaml
-google_tag_manager: GTM-XXXXXXX
-```
+TODO
 
-where `GTM-XXXXXXX` is your Google Tag Manager Container ID. 
-**Note** by default GTM tracking snippet will be also included in development. Google Tag Manager was chosen for this project as it's more flexible than Google Analytics, and it can be used to add GA to your site.
-
-###[Disqus](#disqus)
+### Disqus
 
 To enable Disqus comments, add your [Disqus shortname](https://help.disqus.com/customer/portal/articles/466208) to `_config.yml`:
 
@@ -114,22 +107,10 @@ To enable Disqus comments, add your [Disqus shortname](https://help.disqus.com/c
 disqus:
   shortname: my_disqus_shortname
 ```
-###[Formspree](#formspree)
+### Formspree
 
 
-To use [Formspree](https://formspree.io/) with your email address, you need to change the following:
-
-Change `your-email@domain.com` email in `_config.yml`
-```yaml
-email: your-email@domain.com
-```
-
-Change `your-email@domain.com` to your email in `_js/scripts` (should be at the bottom of the code inside `$.ajax( {` function).
-```javascript
-url: "https://formspree.io/your-email@domain.com"
-```
-
-You can check if it works  by simply submitting the form.
+TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
 
 ## Contributing
 
@@ -137,9 +118,9 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/janczi
 
 ## Development
 
-To set up your environment to develop this theme, run `bundle install` and `npm install`.
+To set up your environment to develop this theme, run `bundle install`.
 
-Your theme is setup just like a normal Jekyll site! Check out [file structure overview](#file-structure-overview) for details. To test your theme, run `gulp` and open your browser at `http://localhost:3000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 
 When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
 To add a custom directory to your theme-gem, please edit the regexp in `jekyll-sleek.gemspec` accordingly.

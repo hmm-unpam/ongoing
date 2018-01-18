@@ -17,13 +17,10 @@ $( document ).keyup( function( e ) {
 $( window ).resize( function() {
     $( ".header" ).removeClass( "hide-nav" ); // Ensure nav will be shown on resize
     $( ".header__links" ).removeAttr( "style" ); // If mobile nav was collapsed, make sure it's show on DESK
-    $( ".header__overlay" ).remove(); // Remove mobile navigation overlay in case it was opened
+    $( ".header__overlay" ).remove();
 } );
 
-/*-------------------------------------------------------------------------*/
-/* MOBILE NAVIGATION */
-/* -----------------------------------------------------------------------*/
-
+// Toggle Mobile Navigation
 function toggleMobileNav() {
     $( ".header__toggle" ).click( function() {
 
@@ -79,10 +76,7 @@ function hideMobileNav() {
     } );
 }
 
-/*-------------------------------------------------------------------------*/
-/* SHOW/SCROLL NAVIGATION */
-/* -----------------------------------------------------------------------*/
-
+// SHOW/HIDE NAV
 function ShowHideNav() {
     var previousScroll = 0, // previous scroll position
         $header = $( ".header" ), // just storing header in a variable
@@ -147,9 +141,6 @@ function ShowHideNav() {
     } );
 }
 
-/*-------------------------------------------------------------------------*/
-/* HANDLE MODAL */
-/* -----------------------------------------------------------------------*/
 
 function openModal() {
     $( "body" ).css( "overflow", "hidden" );
@@ -180,10 +171,7 @@ $( ".modal__overlay" ).click( function() {
     removeModal();
 } );
 
-/*-------------------------------------------------------------------------*/
-/* FORM VALIDATION */
-/* -----------------------------------------------------------------------*/
-
+// Contact Form Validation
 function formCheck() {
     $( ".js-submit" ).click( function( e ) {
 
@@ -241,11 +229,7 @@ function addErrorData( element, error ) {
     element.after( "<span class='error-data'>" + error + "</span>" );
 }
 
-
-/*-------------------------------------------------------------------------*/
-/* AJAX FORM SUBMIT */
-/* -----------------------------------------------------------------------*/
-
+// AJAX Form submit
 $( "#contactForm" ).submit( function( e ) {
 
     e.preventDefault();
@@ -258,7 +242,7 @@ $( "#contactForm" ).submit( function( e ) {
     $.ajax( {
 
         // Change the email address here:
-        url: "https://formspree.io/your-email@domain.com",
+        url: "https://formspree.io/jan.czizikow@Fmail.com",
         method: "POST",
         data: $( this ).serialize(),
         dataType: "json",
